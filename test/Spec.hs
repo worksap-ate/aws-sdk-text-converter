@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleInstances, TemplateHaskell #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-import Control.Applicative
+import Control.Applicative ((<$>), (<*>))
 import Data.IP
 import Data.Text
 import Data.Time

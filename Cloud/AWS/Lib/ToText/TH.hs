@@ -4,7 +4,7 @@ module Cloud.AWS.Lib.ToText.TH
     ( deriveToText
     ) where
 
-import Control.Applicative
+import Control.Applicative ((<$>))
 import Language.Haskell.TH
 
 import Cloud.AWS.Lib.ToText.Class (ToText(..))

@@ -4,6 +4,7 @@ module Cloud.AWS.Lib.ToText.Class
     ( ToText (toText)
     ) where
 
+import Control.Applicative ((<$>))
 import Data.ByteString (ByteString)
 import Data.IP (IPv4, AddrRange)
 import Data.Text (Text)
@@ -11,7 +12,7 @@ import qualified Data.Text as T
 import qualified Data.Text.Encoding as T
 import Data.Time (UTCTime)
 import qualified Data.Time as Time
-import System.Locale (defaultTimeLocale)
+import Data.Time.Locale.Compat (defaultTimeLocale)
 
 class ToText a where
     toText :: a -> Text
